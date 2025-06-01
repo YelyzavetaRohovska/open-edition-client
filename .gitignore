@@ -1,0 +1,23 @@
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+lib/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm/
+
+# Environment variables
+.env
+.env.*
+
+# Test coverage output
+coverage/
+
+# Jest
+jest-test-results.json
