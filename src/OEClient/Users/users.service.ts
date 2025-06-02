@@ -20,15 +20,23 @@ export class UserService  {
   }
 
   async getUserById(id: string): Promise<User> {
-    const payload = await Post<{ user: User | null }, { id: string }>({
+    if (!id) {
+      throw new Error('Missing required param id');
+    }
+
+    const { user } = await Post<{ user: User | null }, { id: string }>({
       endpoint: `${this.baseUrl}/api/functions/User/Get`,
       token: this.token,
     }, { id });
 
-    if (!payload.user) {
+    if (!user) {
       throw new Error('User is not found');
     }
     
-    return payload.user;
+    return {
+      name: user.name,
+      username: user.username,
+      email: user.email,
+    };
   }
 }

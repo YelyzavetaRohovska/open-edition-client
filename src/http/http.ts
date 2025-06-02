@@ -12,6 +12,7 @@ const httpRequest = async <T, D>(
     method,
     headers: {
       Authorization: `Bearer ${token}`,
+			'Content-Type': "application/json",
     },
     body: (body && JSON.stringify(body)) ?? null,
   });
