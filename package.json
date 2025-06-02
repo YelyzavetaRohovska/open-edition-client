@@ -1,12 +1,26 @@
 {
-  "name": "open-edition-client",
   "version": "1.0.0",
-  "main": "index.js",
+  "name": "@yelyzavetarohovska/open-edition-client",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yelyzavetarohovska/open-edition-client.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
-    "test": "jest"
+    "build": "tsc",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "prepare": "npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yelyzaveta Rohovska",
   "license": "ISC",
   "description": "",
   "devDependencies": {
