@@ -12,6 +12,16 @@ Install the package using npm:
 npm install @yelyzavetarohovska/open-edition-client
 ```
 
+> **Note:**  
+> Before installing, make sure you have an `.npmrc` file configured in your project with the following content:  
+> 
+> ```
+> @yelyzavetarohovska:registry=https://npm.pkg.github.com/
+> //npm.pkg.github.com/:_authToken=\${GITHUB_TOKEN}
+> ```
+> 
+> Replace `${GITHUB_TOKEN}` with a valid GitHub personal access token that has permission to access GitHub Packages.
+
 ---
 
 ## ⚙️ Setup
